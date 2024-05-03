@@ -1,0 +1,927 @@
+:root {
+    --my-color: #7540ee;
+    --my-orange: #ffab00;
+    --h4-color: #2e3280;
+    --p-color: #4e5d78;
+    /* Your custom hex code */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    text-align: center;
+    margin: auto;
+    max-width: 1120px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    background-color: white;
+    height: 80px;
+    color: darkslategrey;
+    font-weight: 500;
+}
+
+.header_right {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 3rem;
+}
+
+button {
+    padding-inline: 35px;
+    padding-block: 8px;
+    border-radius: 50px;
+    background-color: var(--my-color);
+    border: none;
+    color: chartreuse;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    text-align: start;
+    border-width: 10px;
+    border: gray;
+    border-radius: 15px;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--my-color);
+    display: flex;
+    justify-content: end;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    column-gap: 9rem;
+}
+
+.content h1 {
+    font-size: 3rem;
+}
+
+.text {
+    max-width: 650px;
+}
+
+.text h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.text p {
+    font-size: 17px;
+}
+
+.text button {
+    font-size: 17px;
+    background-color: var(--my-orange);
+    margin-top: 10px;
+    font-size: small;
+    padding-block: 12px;
+}
+
+.image img {
+    border-radius: 10px;
+    /* Adjust border-radius if you want rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.companies {
+    text-align: center;
+    padding-block: 50px;
+}
+
+.tag {
+    font-weight: 600;
+    color: gray;
+    letter-spacing: 0.4px;
+}
+
+.companies h5 {
+    padding-block: 10px;
+}
+
+.companies div {
+    column-gap: 90px;
+}
+
+.companies img {
+    transition: filter 0.3s ease;
+}
+
+.companies img:hover {
+    filter: none;
+    opacity: 100%;
+}
+
+.companies img {
+    filter: grayscale(100%);
+    opacity: 40%;
+}
+
+.demos {
+    border-top: 1px solid #d6d7f2;
+    border-bottom: 1px solid #d6d7f2;
+    /* padding: 20px; */
+    width: 100%;
+    max-width: none;
+    background-color: #f5f7fd;
+    padding-block: 80px;
+    /* opacity: 50%; */
+}
+
+.demos div {
+    border: 1px solid var(--my-orange);
+    background-color: #fffaf1;
+    width: 100%;
+    max-width: 80%;
+    padding-inline: 30px;
+    padding-block: 20px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.demos p {
+    font-size: medium;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.demos button {
+    background-color: white;
+    border: 2px solid var(--my-orange);
+    /* padding: 10px 20px; */
+    color: var(--my-orange);
+    font-weight: bold;
+}
+
+.demos button:hover {
+    background-color: blue;
+    /* Change background color on hover */
+    color: yellow;
+    /* Change text color on hover */
+}
+
+/* Center align text */
+.key-features {
+    padding-block: 100px;
+    text-align: center;
+}
+
+/* Add spacing */
+.key-features h1 {
+    margin-bottom: 100px;
+    font-weight: 700;
+}
+
+.key-features h4 {
+    font-weight: 600;
+    color: var(--h4-color);
+}
+
+.key-features p {
+    font-size: larger;
+    color: var(--p-color);
+}
+
+/* Flexbox layout */
+.feature-row {
+    display: flex;
+    justify-content: center;
+    max-width: 85%;
+    margin: auto;
+}
+
+.feature-column {
+    flex: 1;
+    max-width: 25%;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+}
+
+/* Center align divs inside columns */
+.feature-column>div {
+    margin: 0 auto;
+}
+
+/* Bold heading and center align */
+.feature-column h1 {
+    font-weight: bold;
+}
+
+.election {
+    position: relative;
+    color: white;
+}
+
+.election-details {
+    background-color: var(--my-color);
+    width: 100%;
+    top: 750px;
+    position: absolute;
+    padding-block: 90px;
+    column-gap: 90px;
+    text-align: center;
+}
+
+.election img {
+    position: relative;
+    color: white;
+    height: 95rem;
+}
+
+
+.election-details h1 {
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.choice-voting {
+    padding-block: 200px;
+    text-align: center;
+}
+
+/* Add spacing */
+.choice-voting h1 {
+    margin-bottom: 100px;
+    font-weight: 700;
+}
+
+.choice-voting h4 {
+    margin-top: 30px;
+    font-weight: 600;
+    color: var(--h4-color);
+    margin-bottom: 20px;
+}
+
+.choice-voting p {
+    font-size: larger;
+    color: var(--p-color);
+}
+
+/* Flexbox layout */
+.choice-voting-row {
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    max-width: 90%;
+    margin: auto;
+}
+
+.choice-voting-column {
+    flex: 1;
+    max-width: 28%;
+    padding: 20px 20px 40px 20px;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.choice-voting-column:hover {
+    box-shadow: 0px 2px 30px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+.choice-voting-column div {
+    background-color: var(--my-orange);
+    border-radius: 100%;
+    padding: 7px 20px 7px 20px;
+    width: max-content;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Center align divs inside columns */
+.choice-voting>div {
+    margin: 0 auto;
+}
+
+/* Bold heading and center align */
+.choice-voting h1 {
+    font-weight: bold;
+}
+
+.my-carousel {
+    height: 450px;
+    background-color: var(--my-color);
+    width: 100%;
+    display: flex;
+}
+
+.container {
+    height: 100%;
+    width: 90%;
+}
+
+.carousel {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* .carousel .carousel-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    background-color: #ffab00;
+} */
+
+/* Styles for left and right buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+}
+
+.carousel-button-left {
+    left: 10px;
+    /* Adjust left position as needed */
+}
+
+.carousel-button-right {
+    right: 10px;
+    /* Adjust right position as needed */
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    height: 100%;
+    padding-block: 60px;
+    max-width: 60%;
+}
+
+.item p {
+    font-size: 20px;
+    color: white;
+}
+
+.item img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20px;
+    margin-inline: auto;
+    border: 3px solid white;
+    border-radius: 100%;
+    box-shadow: 0px 2px 30px 4px rgb(255, 255, 255);
+}
+
+.better-decisions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    margin-block: 100px;
+}
+
+.better-decisions-outer {
+    margin-inline: auto;
+    max-width: 85%;
+    column-gap: 100px;
+    font-size: 18px;
+}
+
+.better-decisions h1 {
+    font-weight: 700;
+    margin-bottom: 100px;
+}
+
+.left-list {
+    font-size: 14px;
+}
+
+.left-list-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3px;
+}
+
+
+/* Style for the left div */
+.better-decisions .left {
+    flex: 1;
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* Style for the right div */
+.better-decisions .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust image size */
+.better-decisions .right img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 2px 30px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pool-vote {
+    background-color: var(--my-color);
+}
+
+.pool-vote .row {
+    max-width: 85%;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding-block: 100px;
+    /* Center the row horizontally */
+}
+
+.pool-vote .row>div {
+    flex: 1;
+    /* Each div takes up equal space */
+}
+
+.pool-vote .row>div:nth-child(2) {
+    text-align: right;
+    /* Align content of second div to the right */
+}
+
+.pool-vote button {
+    background-color: #0a1f44;
+    color: var(--my-color);
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    padding-block: 14px;
+    padding-inline: 38px;
+
+    color: white;
+}
+
+.footer {
+    color: darkslateblue;
+    padding: 80px;
+    display: flex;
+    width: 100%;
+}
+
+.footer-left {
+    flex: 1;
+}
+
+.footer-right {
+    flex: 1;
+    display: flex;
+    column-gap: 50px;
+    font-weight: 500;
+}
+
+.footer-right h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.footer-left div {
+    margin-top: 20px;
+}
+
+.footer-right div {
+    margin-top: 10px;
+}
+
+.icon-main {
+    display: flex;
+    column-gap: 10px
+}
+
+.social-icon {
+    font-size: 16px;
+    opacity: 60%;
+    filter: grayscale(100%);
+    color: var(--my-color);
+}
+
+.social-icon-box {
+    background-color: rgba(211, 206, 206, 0.685);
+    padding-inline: 10px;
+    padding-block: 8px;
+    border-radius: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .header_right {
+        visibility: hidden;
+    }
+
+    .flex_container {
+        display: block;
+        height: auto;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .footer-right {
+        display: block;
+    }
+
+    .flex {
+        display: block;
+    }
+
+    .hero-section {
+        position: relative;
+        height: 200vh;
+        overflow: hidden;
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .background img {
+        visibility: hidden;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .content h1 {
+        font-size: 1rem;
+    }
+
+    .text h1 {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+
+    .text p {
+        font-size: 17px;
+    }
+
+    .text button {
+        font-size: 17px;
+        font-size: small;
+        padding-block: 12px;
+    }
+
+    .image img {
+        margin-top: 80px;
+        width: 95%;
+    }
+
+    .companies img {
+        margin-block: 20px;
+    }
+
+    .demos {
+        padding-block: 40px;
+    }
+
+    .demos div {
+        margin: auto;
+        max-width: 90%;
+        padding-inline: 18px;
+    }
+
+    .key-features {
+        max-width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .feature-row {
+        display: block;
+        justify-content: center;
+        margin: auto;
+        text-align: center;
+    }
+
+    .feature-column {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .election {
+        position: relative;
+        color: white;
+    }
+
+    .election-details {
+        top: 210px;
+        padding-block: 80px;
+        column-gap: 30px;
+
+    }
+
+    .election img {
+        height: 24rem;
+    }
+
+    .choice-voting {
+        margin-top: 480px;
+        max-width: 90%;
+        margin-inline: auto;
+        padding-block: 50px;
+    }
+
+    /* Flexbox layout */
+    .choice-voting-row {
+        display: block;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .choice-voting-column {
+        max-width: 100%;
+    }
+
+    .my-carousel {
+        height: 600px;
+        background-color: var(--my-color);
+        width: 100%;
+        display: flex;
+    }
+
+    .container {
+        height: 100%;
+        width: 90%;
+    }
+
+    .item {
+        padding-block: 60px;
+        max-width: 90%;
+    }
+
+    .better-decisions {
+        text-align: center;
+    }
+
+    .better-decisions .right {
+        margin-top: 50px;
+    }
+
+    .pool-vote .row {
+        max-width: 90%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* Center the row horizontally */
+    }
+
+    .pool-vote button {
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .footer {
+        padding: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-right h5 {
+        margin-top: 50px;
+    }
+
+    .icon-main {
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .header_right {
+        visibility: hidden;
+    }
+
+    .flex_container {
+        display: block;
+        height: auto;
+    }
+
+    .footer {
+        display: block;
+    }
+
+    .footer-right {
+        display: block;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .hero-section {
+        position: relative;
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    .text h1 {
+        font-size: 5rem;
+    }
+
+    .companies {
+        max-width: 90%;
+        margin-inline: auto;
+    }
+
+    .election {
+        position: relative;
+        color: white;
+    }
+
+    .election-details {
+        top: 450px;
+        padding-block: 80px;
+        padding-inline: 200px;
+
+    }
+
+    .election img {
+        height: 55rem;
+    }
+
+    .choice-voting {
+        margin-top: 200px;
+    }
+
+    /* Flexbox layout */
+    .choice-voting-row {
+        display: flex;
+    }
+
+    .choice-voting-column {
+        max-width: 100%;
+    }
+
+    .my-carousel {
+        height: 450px;
+    }
+
+    .better-decisions-outer {
+        display: block;
+    }
+
+    .better-decisions .right {
+        margin-top: 50px;
+    }
+
+    .footer {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        text-align: start;
+    }
+
+    .footer-right {
+        flex: 1;
+        display: flex;
+    }
+
+    .footer-right h5 {
+        margin-top: 0px;
+    }
+
+    .icon-main {
+        margin: auto;
+        align-items: start;
+        justify-content: start;
+    }
+}
